@@ -2,7 +2,7 @@ package ch.bfh.mobicomp.smuoy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 
 
 /**
@@ -21,7 +21,7 @@ import android.app.Activity;
  * {@link SmuoyListFragment.Callbacks} interface
  * to listen for item selections.
  */
-public class SmuoyListActivity extends Activity
+public class SmuoyListActivity extends ActionBarActivity
         implements SmuoyListFragment.Callbacks {
 
     /**
@@ -34,6 +34,8 @@ public class SmuoyListActivity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_smuoy_list);
+
+        getSupportActionBar().setIcon(R.drawable.ic_launcher);
 
         if (findViewById(R.id.smuoy_detail_container) != null) {
             // The detail container view will be present only in the
