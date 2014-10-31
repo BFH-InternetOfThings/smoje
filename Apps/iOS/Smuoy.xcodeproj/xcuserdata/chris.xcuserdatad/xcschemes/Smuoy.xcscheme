@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Smuoy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83B739DB1A03C517006DEE13"
+               BuildableName = "SmuoyTests copy.xctest"
+               BlueprintName = "SmuoyTests copy"
+               ReferencedContainer = "container:Smuoy.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "839FC5BE19FA746500F09B45"
                BuildableName = "SmuoyTests.xctest"
                BlueprintName = "SmuoyTests"
+               ReferencedContainer = "container:Smuoy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83B739DB1A03C517006DEE13"
+               BuildableName = "SmuoyTests copy.xctest"
+               BlueprintName = "SmuoyTests copy"
                ReferencedContainer = "container:Smuoy.xcodeproj">
             </BuildableReference>
          </TestableReference>

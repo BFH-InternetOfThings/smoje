@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CC2F4ACF0BE5503A5BA8D78 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFEE521809BDFDDC3326A5 /* libPods.a */; };
+		2A795F52D0BB48432DB8E188 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFEE521809BDFDDC3326A5 /* libPods.a */; };
 		839FC5AB19FA746500F09B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AA19FA746500F09B45 /* AppDelegate.swift */; };
 		839FC5AE19FA746500F09B45 /* Smuoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AC19FA746500F09B45 /* Smuoy.xcdatamodeld */; };
 		839FC5B019FA746500F09B45 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AF19FA746500F09B45 /* MasterViewController.swift */; };
@@ -15,6 +17,14 @@
 		839FC5B719FA746500F09B45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B619FA746500F09B45 /* Images.xcassets */; };
 		839FC5BA19FA746500F09B45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B819FA746500F09B45 /* LaunchScreen.xib */; };
 		839FC5C619FA746500F09B45 /* SmuoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5C519FA746500F09B45 /* SmuoyTests.swift */; };
+		83B739EA1A03C520006DEE13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AA19FA746500F09B45 /* AppDelegate.swift */; };
+		83B739EB1A03C520006DEE13 /* Smuoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AC19FA746500F09B45 /* Smuoy.xcdatamodeld */; };
+		83B739EC1A03C520006DEE13 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AF19FA746500F09B45 /* MasterViewController.swift */; };
+		83B739ED1A03C520006DEE13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5B119FA746500F09B45 /* DetailViewController.swift */; };
+		83B739EF1A03C520006DEE13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFEE521809BDFDDC3326A5 /* libPods.a */; };
+		83B739F11A03C520006DEE13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B319FA746500F09B45 /* Main.storyboard */; };
+		83B739F21A03C520006DEE13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B819FA746500F09B45 /* LaunchScreen.xib */; };
+		83B739F31A03C520006DEE13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B619FA746500F09B45 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51F211E12A654F43FFD9EB48 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5D9C31CA7FC82707C55EFD38 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		839FC5A519FA746500F09B45 /* Smuoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smuoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839FC5A919FA746500F09B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839FC5AA19FA746500F09B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +52,10 @@
 		839FC5BF19FA746500F09B45 /* SmuoyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmuoyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839FC5C419FA746500F09B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839FC5C519FA746500F09B45 /* SmuoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmuoyTests.swift; sourceTree = "<group>"; };
+		83B739E61A03C517006DEE13 /* SmuoyTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SmuoyTests copy-Info.plist"; path = "/Users/chris/git/Smoje/Apps/iOS/SmuoyTests copy-Info.plist"; sourceTree = "<absolute>"; };
+		83B739F81A03C520006DEE13 /* Smuoy copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smuoy copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B739F91A03C520006DEE13 /* Smuoy copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Smuoy copy-Info.plist"; path = "/Users/chris/git/Smoje/Apps/iOS/Smuoy copy-Info.plist"; sourceTree = "<absolute>"; };
+		92DFEE521809BDFDDC3326A5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC2F4ACF0BE5503A5BA8D78 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +71,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A795F52D0BB48432DB8E188 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B739EE1A03C520006DEE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B739EF1A03C520006DEE13 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4842EAE049FF926B90B0557F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51F211E12A654F43FFD9EB48 /* Pods.debug.xcconfig */,
+				5D9C31CA7FC82707C55EFD38 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		839FC59C19FA746500F09B45 = {
 			isa = PBXGroup;
 			children = (
 				839FC5A719FA746500F09B45 /* Smuoy */,
 				839FC5C219FA746500F09B45 /* SmuoyTests */,
 				839FC5A619FA746500F09B45 /* Products */,
+				4842EAE049FF926B90B0557F /* Pods */,
+				BFE2161773CD2106070882FA /* Frameworks */,
+				83B739E61A03C517006DEE13 /* SmuoyTests copy-Info.plist */,
+				83B739F91A03C520006DEE13 /* Smuoy copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +113,7 @@
 			children = (
 				839FC5A519FA746500F09B45 /* Smuoy.app */,
 				839FC5BF19FA746500F09B45 /* SmuoyTests.xctest */,
+				83B739F81A03C520006DEE13 /* Smuoy copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +158,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BFE2161773CD2106070882FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92DFEE521809BDFDDC3326A5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 839FC5C919FA746500F09B45 /* Build configuration list for PBXNativeTarget "Smuoy" */;
 			buildPhases = (
+				56F7DC210A13FEA82D5339BC /* Check Pods Manifest.lock */,
 				839FC5A119FA746500F09B45 /* Sources */,
 				839FC5A219FA746500F09B45 /* Frameworks */,
 				839FC5A319FA746500F09B45 /* Resources */,
+				9987B840D5CED775DCC6E2BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 839FC5CC19FA746500F09B45 /* Build configuration list for PBXNativeTarget "SmuoyTests" */;
 			buildPhases = (
+				9B4AC582F3C20CA7824751EA /* Check Pods Manifest.lock */,
 				839FC5BB19FA746500F09B45 /* Sources */,
 				839FC5BC19FA746500F09B45 /* Frameworks */,
 				839FC5BD19FA746500F09B45 /* Resources */,
+				5399AA9801C6482ED255C9A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +207,25 @@
 			productName = SmuoyTests;
 			productReference = 839FC5BF19FA746500F09B45 /* SmuoyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83B739E71A03C520006DEE13 /* Smuoy Mock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83B739F51A03C520006DEE13 /* Build configuration list for PBXNativeTarget "Smuoy Mock" */;
+			buildPhases = (
+				83B739E81A03C520006DEE13 /* Check Pods Manifest.lock */,
+				83B739E91A03C520006DEE13 /* Sources */,
+				83B739EE1A03C520006DEE13 /* Frameworks */,
+				83B739F01A03C520006DEE13 /* Resources */,
+				83B739F41A03C520006DEE13 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smuoy Mock";
+			productName = Smuoy;
+			productReference = 83B739F81A03C520006DEE13 /* Smuoy copy.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -189,6 +260,7 @@
 			targets = (
 				839FC5A419FA746500F09B45 /* Smuoy */,
 				839FC5BE19FA746500F09B45 /* SmuoyTests */,
+				83B739E71A03C520006DEE13 /* Smuoy Mock */,
 			);
 		};
 /* End PBXProject section */
@@ -211,7 +283,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83B739F01A03C520006DEE13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B739F11A03C520006DEE13 /* Main.storyboard in Resources */,
+				83B739F21A03C520006DEE13 /* LaunchScreen.xib in Resources */,
+				83B739F31A03C520006DEE13 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5399AA9801C6482ED255C9A5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56F7DC210A13FEA82D5339BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83B739E81A03C520006DEE13 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83B739F41A03C520006DEE13 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9987B840D5CED775DCC6E2BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B4AC582F3C20CA7824751EA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		839FC5A119FA746500F09B45 /* Sources */ = {
@@ -230,6 +405,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				839FC5C619FA746500F09B45 /* SmuoyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83B739E91A03C520006DEE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83B739EA1A03C520006DEE13 /* AppDelegate.swift in Sources */,
+				83B739EB1A03C520006DEE13 /* Smuoy.xcdatamodeld in Sources */,
+				83B739EC1A03C520006DEE13 /* MasterViewController.swift in Sources */,
+				83B739ED1A03C520006DEE13 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +530,7 @@
 		};
 		839FC5CA19FA746500F09B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F211E12A654F43FFD9EB48 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Smuoy/Info.plist;
@@ -354,6 +541,7 @@
 		};
 		839FC5CB19FA746500F09B45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9C31CA7FC82707C55EFD38 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Smuoy/Info.plist;
@@ -364,6 +552,7 @@
 		};
 		839FC5CD19FA746500F09B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F211E12A654F43FFD9EB48 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -383,6 +572,7 @@
 		};
 		839FC5CE19FA746500F09B45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9C31CA7FC82707C55EFD38 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -393,6 +583,28 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smuoy.app/Smuoy";
+			};
+			name = Release;
+		};
+		83B739F61A03C520006DEE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F211E12A654F43FFD9EB48 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Smuoy copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Smuoy copy";
+			};
+			name = Debug;
+		};
+		83B739F71A03C520006DEE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9C31CA7FC82707C55EFD38 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Smuoy copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Smuoy copy";
 			};
 			name = Release;
 		};
@@ -415,6 +627,7 @@
 				839FC5CB19FA746500F09B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		839FC5CC19FA746500F09B45 /* Build configuration list for PBXNativeTarget "SmuoyTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +636,16 @@
 				839FC5CE19FA746500F09B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83B739F51A03C520006DEE13 /* Build configuration list for PBXNativeTarget "Smuoy Mock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83B739F61A03C520006DEE13 /* Debug */,
+				83B739F71A03C520006DEE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
