@@ -11,20 +11,33 @@
 		2A795F52D0BB48432DB8E188 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFEE521809BDFDDC3326A5 /* libPods.a */; };
 		839FC5AB19FA746500F09B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AA19FA746500F09B45 /* AppDelegate.swift */; };
 		839FC5AE19FA746500F09B45 /* Smuoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AC19FA746500F09B45 /* Smuoy.xcdatamodeld */; };
-		839FC5B019FA746500F09B45 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AF19FA746500F09B45 /* MasterViewController.swift */; };
-		839FC5B219FA746500F09B45 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5B119FA746500F09B45 /* DetailViewController.swift */; };
 		839FC5B519FA746500F09B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B319FA746500F09B45 /* Main.storyboard */; };
 		839FC5B719FA746500F09B45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B619FA746500F09B45 /* Images.xcassets */; };
 		839FC5BA19FA746500F09B45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B819FA746500F09B45 /* LaunchScreen.xib */; };
 		839FC5C619FA746500F09B45 /* SmuoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5C519FA746500F09B45 /* SmuoyTests.swift */; };
+		83A47D181A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */; };
+		83A47D191A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */; };
 		83B739EA1A03C520006DEE13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AA19FA746500F09B45 /* AppDelegate.swift */; };
 		83B739EB1A03C520006DEE13 /* Smuoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AC19FA746500F09B45 /* Smuoy.xcdatamodeld */; };
-		83B739EC1A03C520006DEE13 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AF19FA746500F09B45 /* MasterViewController.swift */; };
-		83B739ED1A03C520006DEE13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5B119FA746500F09B45 /* DetailViewController.swift */; };
 		83B739EF1A03C520006DEE13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFEE521809BDFDDC3326A5 /* libPods.a */; };
 		83B739F11A03C520006DEE13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B319FA746500F09B45 /* Main.storyboard */; };
 		83B739F21A03C520006DEE13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B819FA746500F09B45 /* LaunchScreen.xib */; };
 		83B739F31A03C520006DEE13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839FC5B619FA746500F09B45 /* Images.xcassets */; };
+		83E0927F1A03CBB5006F0267 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E092781A03CBB5006F0267 /* Event.swift */; };
+		83E092801A03CBB5006F0267 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E092781A03CBB5006F0267 /* Event.swift */; };
+		83E092811A03CBB5006F0267 /* _Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927A1A03CBB5006F0267 /* _Event.swift */; };
+		83E092821A03CBB5006F0267 /* _Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927A1A03CBB5006F0267 /* _Event.swift */; };
+		83E092831A03CBB5006F0267 /* _SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927B1A03CBB5006F0267 /* _SensorData.swift */; };
+		83E092841A03CBB5006F0267 /* _SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927B1A03CBB5006F0267 /* _SensorData.swift */; };
+		83E092851A03CBB5006F0267 /* _Smuoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927C1A03CBB5006F0267 /* _Smuoy.swift */; };
+		83E092861A03CBB5006F0267 /* _Smuoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927C1A03CBB5006F0267 /* _Smuoy.swift */; };
+		83E092871A03CBB5006F0267 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927D1A03CBB5006F0267 /* SensorData.swift */; };
+		83E092881A03CBB5006F0267 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927D1A03CBB5006F0267 /* SensorData.swift */; };
+		83E092891A03CBB5006F0267 /* Smuoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927E1A03CBB5006F0267 /* Smuoy.swift */; };
+		83E0928A1A03CBB5006F0267 /* Smuoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0927E1A03CBB5006F0267 /* Smuoy.swift */; };
+		83E0928C1A03CD7E006F0267 /* THCCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E0928B1A03CD7E006F0267 /* THCCoreData.framework */; };
+		83E0928E1A03CD8B006F0267 /* THCCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E0928D1A03CD8B006F0267 /* THCCoreData.framework */; };
+		83E092901A03CD91006F0267 /* THCCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E0928F1A03CD91006F0267 /* THCCoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,17 +57,25 @@
 		839FC5A919FA746500F09B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839FC5AA19FA746500F09B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839FC5AD19FA746500F09B45 /* Smuoy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Smuoy.xcdatamodel; sourceTree = "<group>"; };
-		839FC5AF19FA746500F09B45 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		839FC5B119FA746500F09B45 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		839FC5B419FA746500F09B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		839FC5B619FA746500F09B45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		839FC5B919FA746500F09B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		839FC5BF19FA746500F09B45 /* SmuoyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmuoyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839FC5C419FA746500F09B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839FC5C519FA746500F09B45 /* SmuoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmuoyTests.swift; sourceTree = "<group>"; };
+		83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmuoyTableViewController.swift; sourceTree = "<group>"; };
 		83B739E61A03C517006DEE13 /* SmuoyTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SmuoyTests copy-Info.plist"; path = "/Users/chris/git/Smoje/Apps/iOS/SmuoyTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		83B739F81A03C520006DEE13 /* Smuoy copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smuoy copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B739F91A03C520006DEE13 /* Smuoy copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Smuoy copy-Info.plist"; path = "/Users/chris/git/Smoje/Apps/iOS/Smuoy copy-Info.plist"; sourceTree = "<absolute>"; };
+		83E092781A03CBB5006F0267 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		83E0927A1A03CBB5006F0267 /* _Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Event.swift; sourceTree = "<group>"; };
+		83E0927B1A03CBB5006F0267 /* _SensorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _SensorData.swift; sourceTree = "<group>"; };
+		83E0927C1A03CBB5006F0267 /* _Smuoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Smuoy.swift; sourceTree = "<group>"; };
+		83E0927D1A03CBB5006F0267 /* SensorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
+		83E0927E1A03CBB5006F0267 /* Smuoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Smuoy.swift; sourceTree = "<group>"; };
+		83E0928B1A03CD7E006F0267 /* THCCoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = THCCoreData.framework; path = "THCCoreData/build/Debug-iphoneos/THCCoreData.framework"; sourceTree = "<group>"; };
+		83E0928D1A03CD8B006F0267 /* THCCoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = THCCoreData.framework; path = "THCCoreData/build/Debug-iphoneos/THCCoreData.framework"; sourceTree = "<group>"; };
+		83E0928F1A03CD91006F0267 /* THCCoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = THCCoreData.framework; path = "THCCoreData/build/Debug-iphoneos/THCCoreData.framework"; sourceTree = "<group>"; };
 		92DFEE521809BDFDDC3326A5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E0928C1A03CD7E006F0267 /* THCCoreData.framework in Frameworks */,
 				0CC2F4ACF0BE5503A5BA8D78 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E0928E1A03CD8B006F0267 /* THCCoreData.framework in Frameworks */,
 				2A795F52D0BB48432DB8E188 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E092901A03CD91006F0267 /* THCCoreData.framework in Frameworks */,
 				83B739EF1A03C520006DEE13 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +122,7 @@
 		839FC59C19FA746500F09B45 = {
 			isa = PBXGroup;
 			children = (
+				83E092771A03CBB5006F0267 /* Models */,
 				839FC5A719FA746500F09B45 /* Smuoy */,
 				839FC5C219FA746500F09B45 /* SmuoyTests */,
 				839FC5A619FA746500F09B45 /* Products */,
@@ -122,8 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				839FC5AA19FA746500F09B45 /* AppDelegate.swift */,
-				839FC5AF19FA746500F09B45 /* MasterViewController.swift */,
-				839FC5B119FA746500F09B45 /* DetailViewController.swift */,
+				83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */,
 				839FC5B319FA746500F09B45 /* Main.storyboard */,
 				839FC5B619FA746500F09B45 /* Images.xcassets */,
 				839FC5B819FA746500F09B45 /* LaunchScreen.xib */,
@@ -158,9 +182,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		83E092771A03CBB5006F0267 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83E092791A03CBB5006F0267 /* Generated */,
+				83E092781A03CBB5006F0267 /* Event.swift */,
+				83E0927D1A03CBB5006F0267 /* SensorData.swift */,
+				83E0927E1A03CBB5006F0267 /* Smuoy.swift */,
+			);
+			name = Models;
+			path = Smuoy/Models;
+			sourceTree = "<group>";
+		};
+		83E092791A03CBB5006F0267 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				83E0927A1A03CBB5006F0267 /* _Event.swift */,
+				83E0927B1A03CBB5006F0267 /* _SensorData.swift */,
+				83E0927C1A03CBB5006F0267 /* _Smuoy.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		BFE2161773CD2106070882FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83E0928F1A03CD91006F0267 /* THCCoreData.framework */,
+				83E0928D1A03CD8B006F0267 /* THCCoreData.framework */,
+				83E0928B1A03CD7E006F0267 /* THCCoreData.framework */,
 				92DFEE521809BDFDDC3326A5 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -394,9 +443,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				839FC5AB19FA746500F09B45 /* AppDelegate.swift in Sources */,
+				83A47D181A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */,
 				839FC5AE19FA746500F09B45 /* Smuoy.xcdatamodeld in Sources */,
-				839FC5B019FA746500F09B45 /* MasterViewController.swift in Sources */,
-				839FC5B219FA746500F09B45 /* DetailViewController.swift in Sources */,
+				83E092811A03CBB5006F0267 /* _Event.swift in Sources */,
+				83E092891A03CBB5006F0267 /* Smuoy.swift in Sources */,
+				83E092851A03CBB5006F0267 /* _Smuoy.swift in Sources */,
+				83E0927F1A03CBB5006F0267 /* Event.swift in Sources */,
+				83E092831A03CBB5006F0267 /* _SensorData.swift in Sources */,
+				83E092871A03CBB5006F0267 /* SensorData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,9 +467,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B739EA1A03C520006DEE13 /* AppDelegate.swift in Sources */,
+				83A47D191A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */,
 				83B739EB1A03C520006DEE13 /* Smuoy.xcdatamodeld in Sources */,
-				83B739EC1A03C520006DEE13 /* MasterViewController.swift in Sources */,
-				83B739ED1A03C520006DEE13 /* DetailViewController.swift in Sources */,
+				83E092821A03CBB5006F0267 /* _Event.swift in Sources */,
+				83E0928A1A03CBB5006F0267 /* Smuoy.swift in Sources */,
+				83E092861A03CBB5006F0267 /* _Smuoy.swift in Sources */,
+				83E092801A03CBB5006F0267 /* Event.swift in Sources */,
+				83E092841A03CBB5006F0267 /* _SensorData.swift in Sources */,
+				83E092881A03CBB5006F0267 /* SensorData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +592,10 @@
 			baseConfigurationReference = 51F211E12A654F43FFD9EB48 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/THCCoreData/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Smuoy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,6 +607,10 @@
 			baseConfigurationReference = 5D9C31CA7FC82707C55EFD38 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/THCCoreData/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Smuoy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -558,6 +625,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/THCCoreData/build/Debug-iphoneos",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -578,6 +646,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/THCCoreData/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = SmuoyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -591,6 +660,10 @@
 			baseConfigurationReference = 51F211E12A654F43FFD9EB48 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/THCCoreData/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Smuoy copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Smuoy copy";
@@ -602,6 +675,10 @@
 			baseConfigurationReference = 5D9C31CA7FC82707C55EFD38 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/THCCoreData/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Smuoy copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Smuoy copy";

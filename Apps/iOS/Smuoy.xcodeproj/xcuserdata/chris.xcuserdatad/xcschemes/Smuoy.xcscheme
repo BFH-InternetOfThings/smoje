@@ -48,6 +48,20 @@
                ReferencedContainer = "container:Smuoy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "03145F8F19E92FAE00E41FC1"
+               BuildableName = "THCCoreData.framework"
+               BlueprintName = "THCCoreData"
+               ReferencedContainer = "container:THCCoreData/THCCoreData.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
