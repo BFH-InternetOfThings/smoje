@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smoje</string>
+    <string name="data_card_image_alt">Ein aktuelles Bild der Smoje</string>
+    <string name="title_smuoy_detail">Smoje Detailansicht</string>
+</resources>

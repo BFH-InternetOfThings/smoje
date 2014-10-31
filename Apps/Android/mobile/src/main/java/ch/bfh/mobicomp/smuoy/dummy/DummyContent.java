@@ -1,9 +1,6 @@
 package ch.bfh.mobicomp.smuoy.dummy;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -16,21 +13,26 @@ public class DummyContent {
     /**
      * An array of sample (dummy) items.
      */
-    public static List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+    public static List<Smuoy> ITEMS = new ArrayList<>();
 
     /**
      * A map of sample (dummy) items, by ID.
      */
-    public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
+    public static Map<String, Smuoy> ITEM_MAP = new HashMap<>();
 
     static {
         // Add 3 sample items.
-        addItem(new DummyItem("1", "Item 1"));
-        addItem(new DummyItem("2", "Item 2"));
-        addItem(new DummyItem("3", "Item 3"));
+        addItem(new Smuoy("1: Adelpha",
+                new SensorData("Temperature", null, 5.34562674176, "°C"),
+                new SensorData("Speed", "Wind", 12.13457556848, "km/h"),
+                new SensorData("Direction", "Wind", 32.265723, "°")));
+        addItem(new Smuoy("2: Bob",
+                new SensorData("Speed", "Wind", 12.13457556848, "km/h")));
+        addItem(new Smuoy("3: Celestia",
+                new SensorData("Direction", "Wind", 32.265723, "°")));
     }
 
-    private static void addItem(DummyItem item) {
+    private static void addItem(Smuoy item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.id, item);
     }
@@ -38,18 +40,43 @@ public class DummyContent {
     /**
      * A dummy item representing a piece of content.
      */
-    public static class DummyItem {
+    public static class Smuoy {
         public String id;
-        public String content;
 
-        public DummyItem(String id, String content) {
+        public List<SensorData> sensorData = new LinkedList<>();
+
+        public Smuoy(String id, SensorData... data) {
             this.id = id;
-            this.content = content;
+            for (SensorData d : data) {
+                sensorData.add(d);
+            }
         }
 
         @Override
         public String toString() {
-            return content;
+            return id;
+        }
+    }
+
+    public static class SensorData {
+        String sensor;
+        String group;
+        double value;
+        String unit;
+
+        public SensorData(String sensor, String group, double value, String unit) {
+            this.sensor = sensor;
+            this.value = value;
+            this.unit = unit;
+        }
+
+        public String getGroup() {
+            return group;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("%1$s:\t%2$.2f%3$s", sensor, value, unit);
         }
     }
 }

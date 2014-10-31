@@ -3,5 +3,6 @@
 
     <string name="app_name">Smuoy</string>
     <string name="title_smuoy_detail">Smuoy Detail</string>
+    <string name="data_card_image_alt">A current image from this Smuoy</string>
 
 </resources>
