@@ -3,21 +3,23 @@
                                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                                     android:id="@+id/card_view"
                                     android:padding="16dp"
+                                    android:layout_marginBottom="@dimen/default_spacing"
                                     android:layout_gravity="fill_horizontal"
                                     android:orientation="vertical"
                                     android:layout_height="wrap_content"
                                     android:layout_width="match_parent"
+                                    card_view:cardBackgroundColor="@android:color/white"
                                     card_view:cardCornerRadius="4dp">
 
-
     <ImageView
+            android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:id="@+id/image"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/data_card_image_alt"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/logo"
             android:clickable="true"
             android:cropToPadding="true"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerInside"/>
+
 </android.support.v7.widget.CardView>
