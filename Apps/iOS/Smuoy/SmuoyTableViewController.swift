@@ -27,11 +27,12 @@ class SmuoyTableViewController: UITableViewController {
         
         let smuoy = Smuoy(managedObjectContext: ctx)
         smuoy.name = "Test Smoje"
+        ctx.persist()
+
         
-//        ctx.persist()
-//        let ep = NSErrorPointer()
-//        ctx.save(ep)
-//        ctx.parentContext!.performBlock({ctx.parentContext!.save(ep);return})
+        //        let ep = NSErrorPointer()
+        //        ctx.save(ep)
+        //        ctx.parentContext!.performBlock({ctx.parentContext!.save(ep);return})
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -60,7 +61,8 @@ class SmuoyTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        // FIXME: the error lies here:
+        let cell = tableView.dequeueReusableCellWithIdentifier("SmuoyCell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
         let smuoy = self.fetchedResultsController!.objectAt(indexPath)!
