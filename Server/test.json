@@ -13,172 +13,27 @@
 				"type" : {
 					"id" : "1",
 					"name" : "location",
-					"description" : ""
+					"description" : "",
+					"unit" : "degrees"
 				},
 				"measurements" : [
 					{
 						"id" : "1",
 						"name" : "lat",
 						"value" : 47.102382,
-						"unit" : "degrees celsius",
 						"timestamp" : ""
 					},
 					{
 						"id" : "1",
 						"name" : "lon",
 						"value" : 7.196388,
-						"unit" : "degrees celsius",
 						"timestamp" : ""
 					}
 				]
 			},
 			{
-				"id" : "2",
-				"name" : "air-temperature",
-				"description" : "",
-				"frequency" : 10,
-				"status" : "ok",
-				"type" : {
-					"id" : "2",
-					"name" : "temperature/humidity",
-					"description" : "",
-				},
-				"measurements" : [
-					{
-						"id" : "1",
-						"name" : "temperature",
-						"value" : 4.548347,
-						"unit" : "°C",
-						"timestamp" : ""
-					},
-					{
-						"id" : "1",
-						"name" : "humidity",
-						"value" : 90,
-						"unit" : "%",
-						"timestamp" : ""
-					}
-				]
-			},
-			{
-				"id" : "7",
-				"name" : "wind",
-				"description" : "",
-				"frequency" : 10,
-				"status" : "ok",
-				"type" : {
-					"id" : "2",
-					"name" : "direction/speed",
-					"description" : "",
-				},
-				"measurements" : [
-					{
-						"id" : "1",
-						"name" : "direction",
-						"value" : 4.548347,
-						"unit" : "°",
-						"timestamp" : ""
-					},
-					{
-						"id" : "1",
-						"name" : "speed",
-						"value" : 9f0,
-						"unit" : "km/h",
-						"timestamp" : ""
-					}
-				]
-			},
-			{
-				"id" : "6",
-				"name" : "water-temperature",
-				"description" : "",
-				"frequency" : 10,
-				"status" : "ok",
-				"type" : {
-					"id" : "6",
-					"name" : "temperature",
-					"description" : "",
-				},
-				"measurements" : [
-					{
-						"id" : "1",
-						"name" : "temperature",
-						"value" : 6.344234,
-						"unit" : "°C",
-						"timestamp" : ""
-					}
-				]
-			},
-			{
-				"id" : "3",
-				"name" : "barometer",
-				"description" : "",
-				"frequency" : 10,
-				"status" : "ok",
-				"type" : {
-					"id" : "3",
-					"name" : "temperature/pressure",
-					"description" : "",
-				},
-				"measurements" : [
-					{
-						"id" : "1",
-						"name" : "temperature",
-						"value" : 4.548347,
-						"unit" : "°C",
-						"timestamp" : ""
-					},
-					{
-						"id" : "1",
-						"name" : "air pressure",
-						"value" : 33,
-						"unit" : "kPa",
-						"timestamp" : ""
-					}
-				]
-			},
-			{
-				"id" : "4",
-				"name" : "uv-index",
-				"description" : "",
-				"frequency" : 10,
-				"status" : "ok",
-				"type" : {
-					"id" : "4",
-					"name" : "uv-index",
-					"description" : "",
-				},
-				"measurements" : [
-					{
-						"id" : "1",
-						"name" : "uv-index",
-						"value" : 4.5,
-						"unit" : "",
-						"timestamp" : ""
-					}
-				]
-			},
-			{
-				"id" : "5",
-				"name" : "geiger-counter",
-				"description" : "",
-				"frequency" : 10,
-				"status" : "ok",
-				"type" : {
-					"id" : "5",
-					"name" : "radiation",
-					"description" : "",
-				},
-				"measurements" : [
-					{
-						"id" : "1",
-						"name" : "uv-index",
-						"value" : 4.5,
-						"unit" : "DPM",
-						"timestamp" : ""
-					}
-				]
-			},
+// todo
+			}
 		]
 	},
 	{
