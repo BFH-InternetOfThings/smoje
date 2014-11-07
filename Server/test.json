@@ -1,42 +1,109 @@
 [
 	{
 		"id" : "1",
-		"name" : "Testsmuoy",
+		"name" : "Artemis", // Challenge: Ἄρτεμις 🎱
 		"description" : "",
 		"sensors" : [
 			{
 				"id" : "1",
 				"name" : "gps",
 				"description" : "",
-				"frequency" : 10,
+				"delay" : 60, // seconds
 				"status" : "ok",
 				"type" : {
 					"id" : "1",
 					"name" : "location",
-					"description" : "",
-					"unit" : "degrees"
+					"description" : ""
 				},
 				"measurements" : [
 					{
 						"id" : "1",
 						"name" : "lat",
 						"value" : 47.102382,
-						"timestamp" : ""
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
 					},
 					{
 						"id" : "1",
 						"name" : "lon",
 						"value" : 7.196388,
-						"timestamp" : ""
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
 					}
 				]
 			},
 			{
-// todo
+				"id" : "2",
+				"name" : "wind",
+				"description" : "",
+				"delay" : 120,
+				"status" : "ok",
+				"type" : {
+					"id" : "2",
+					"name" : "wind",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "4",
+						"name" : "speed",
+						"value" : 5.1,
+						"unit" : "km/h",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					},
+					{
+						"id" : "4",
+						"name" : "direction",
+						"value" : 136.916481,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "air temperature",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "air temperature",
+						"value" : 10.6128641024,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "water temperature",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "water temperature",
+						"value" : 12.012800641024,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
 			}
+			// more...?
 		]
-	},
-	{
-// todo
 	}
+	// more...?
 ]
