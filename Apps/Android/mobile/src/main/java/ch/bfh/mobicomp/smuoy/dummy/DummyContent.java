@@ -59,10 +59,10 @@ public class DummyContent {
     }
 
     public static class SensorData {
-        String sensor;
-        String group;
-        double value;
-        String unit;
+        public String sensor;
+        public String group;
+        public double value;
+        public String unit;
 
         public SensorData(String sensor, String group, double value, String unit) {
             this.sensor = sensor;
