@@ -47,11 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let ctx = ContextManager.defaultManager.mainContext
         let smuoys = ctx.fetchObjects(Smuoy)!
-        print("Smuoys: ")
-        println(smuoys.count)
-        for smuoy in smuoys {
-            println(smuoy.name)
-        }
     }
 
     func applicationWillTerminate(application: UIApplication) {

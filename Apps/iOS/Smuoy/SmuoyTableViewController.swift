@@ -21,24 +21,9 @@ class SmuoyTableViewController: UITableViewController {
         self.fetchedResultsController = FetchedTableController(tableView: self.tableView, context: ctx)
         self.fetchedResultsController?.fetchObjects(nil, sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)], sectionNameKeyPath: nil)
 
-        
-        
-        
-        
         let smuoy = Smuoy(managedObjectContext: ctx)
         smuoy.name = "Test Smoje"
         ctx.persist()
-
-        
-        //        let ep = NSErrorPointer()
-        //        ctx.save(ep)
-        //        ctx.parentContext!.performBlock({ctx.parentContext!.save(ep);return})
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,19 +34,14 @@ class SmuoyTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return self.fetchedResultsController!.numberOfSections()
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return self.fetchedResultsController!.numberOfRowsInSection(section)!
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // FIXME: the error lies here:
         let cell = tableView.dequeueReusableCellWithIdentifier("SmuoyCell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...

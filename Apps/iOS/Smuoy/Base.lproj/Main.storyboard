@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8kw-NV-9ng">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8kw-NV-9ng">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -84,7 +84,7 @@
         <scene sceneID="Bab-OF-WrS">
             <objects>
                 <navigationController id="fhD-UD-4aT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="-" id="RcV-gM-DtH"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapView" id="RcV-gM-DtH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UVO-MX-wwD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -128,7 +128,7 @@
         <scene sceneID="I1M-yj-RFY">
             <objects>
                 <navigationController id="zmx-G6-6qC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="QqE-co-0yC"/>
+                    <tabBarItem key="tabBarItem" title="List" image="ListView" id="QqE-co-0yC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jBW-IA-uMr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -143,9 +143,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="-" width="16" height="16"/>
+        <image name="ListView" width="25" height="25"/>
+        <image name="MapView" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cik-NN-rl4"/>
+        <segue reference="ebm-zV-Ulq"/>
     </inferredMetricsTieBreakers>
 </document>
