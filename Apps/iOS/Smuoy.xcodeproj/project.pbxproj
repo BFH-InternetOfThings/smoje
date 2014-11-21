@@ -17,6 +17,10 @@
 		839FC5C619FA746500F09B45 /* SmuoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5C519FA746500F09B45 /* SmuoyTests.swift */; };
 		83A47D181A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */; };
 		83A47D191A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */; };
+		83B119F11A1E813700551CCB /* SmuoyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B119F01A1E813700551CCB /* SmuoyDetailViewController.swift */; };
+		83B119F21A1E813700551CCB /* SmuoyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B119F01A1E813700551CCB /* SmuoyDetailViewController.swift */; };
+		83B119F41A1E81EC00551CCB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B119F31A1E81EC00551CCB /* MapViewController.swift */; };
+		83B119F51A1E81EC00551CCB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B119F31A1E81EC00551CCB /* MapViewController.swift */; };
 		83B739EA1A03C520006DEE13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AA19FA746500F09B45 /* AppDelegate.swift */; };
 		83B739EB1A03C520006DEE13 /* Smuoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 839FC5AC19FA746500F09B45 /* Smuoy.xcdatamodeld */; };
 		83B739EF1A03C520006DEE13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DFEE521809BDFDDC3326A5 /* libPods.a */; };
@@ -64,6 +68,8 @@
 		839FC5C419FA746500F09B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839FC5C519FA746500F09B45 /* SmuoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmuoyTests.swift; sourceTree = "<group>"; };
 		83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmuoyTableViewController.swift; sourceTree = "<group>"; };
+		83B119F01A1E813700551CCB /* SmuoyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmuoyDetailViewController.swift; sourceTree = "<group>"; };
+		83B119F31A1E81EC00551CCB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		83B739E61A03C517006DEE13 /* SmuoyTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SmuoyTests copy-Info.plist"; path = "/Users/chris/git/Smoje/Apps/iOS/SmuoyTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		83B739F81A03C520006DEE13 /* Smuoy copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smuoy copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B739F91A03C520006DEE13 /* Smuoy copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Smuoy copy-Info.plist"; path = "/Users/chris/git/Smoje/Apps/iOS/Smuoy copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -148,6 +154,8 @@
 			children = (
 				839FC5AA19FA746500F09B45 /* AppDelegate.swift */,
 				83A47D171A03D8F100152AF7 /* SmuoyTableViewController.swift */,
+				83B119F01A1E813700551CCB /* SmuoyDetailViewController.swift */,
+				83B119F31A1E81EC00551CCB /* MapViewController.swift */,
 				839FC5B319FA746500F09B45 /* Main.storyboard */,
 				839FC5B619FA746500F09B45 /* Images.xcassets */,
 				839FC5B819FA746500F09B45 /* LaunchScreen.xib */,
@@ -442,7 +450,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B119F41A1E81EC00551CCB /* MapViewController.swift in Sources */,
 				839FC5AB19FA746500F09B45 /* AppDelegate.swift in Sources */,
+				83B119F11A1E813700551CCB /* SmuoyDetailViewController.swift in Sources */,
 				83A47D181A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */,
 				839FC5AE19FA746500F09B45 /* Smuoy.xcdatamodeld in Sources */,
 				83E092811A03CBB5006F0267 /* _Event.swift in Sources */,
@@ -466,7 +476,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B119F51A1E81EC00551CCB /* MapViewController.swift in Sources */,
 				83B739EA1A03C520006DEE13 /* AppDelegate.swift in Sources */,
+				83B119F21A1E813700551CCB /* SmuoyDetailViewController.swift in Sources */,
 				83A47D191A03D8F100152AF7 /* SmuoyTableViewController.swift in Sources */,
 				83B739EB1A03C520006DEE13 /* Smuoy.xcdatamodeld in Sources */,
 				83E092821A03CBB5006F0267 /* _Event.swift in Sources */,

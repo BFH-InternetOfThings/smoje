@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="1582" y="-618"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Smuoy Detail View Controller-->
         <scene sceneID="OPm-eX-xQf">
             <objects>
-                <tableViewController id="li1-Hd-Ucf" sceneMemberID="viewController">
+                <tableViewController id="li1-Hd-Ucf" customClass="SmuoyDetailViewController" customModule="Smuoy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tB5-ho-A5m">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="730" y="212"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="Aa0-SO-Clw">
             <objects>
-                <viewController id="YcL-yq-Qf8" sceneMemberID="viewController">
+                <viewController id="YcL-yq-Qf8" customClass="MapViewController" customModule="Smuoy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V7v-Pt-qil"/>
                         <viewControllerLayoutGuide type="bottom" id="eL8-UC-E3A"/>
