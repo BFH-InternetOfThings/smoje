@@ -2,7 +2,6 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
@@ -25,24 +24,13 @@ public class Sensor implements Serializable {
 
 	private String name;
 
+	@Column(name="station_id")
+	private int stationId;
+
 	private String status;
 
-	//bi-directional many-to-one association to Alert
-	@OneToMany(mappedBy="sensor")
-	private List<Alert> alerts;
-
-	//bi-directional many-to-one association to Measurement
-	@OneToMany(mappedBy="sensor")
-	private List<Measurement> measurements;
-
-	//bi-directional many-to-one association to Sensortype
-	@ManyToOne
-	@JoinColumn(name="stype_id")
-	private Sensortype sensortype;
-
-	//bi-directional many-to-one association to Station
-	@ManyToOne
-	private Station station;
+	@Column(name="stype_id")
+	private int stypeId;
 
 	public Sensor() {
 	}
@@ -79,6 +67,14 @@ public class Sensor implements Serializable {
 		this.name = name;
 	}
 
+	public int getStationId() {
+		return this.stationId;
+	}
+
+	public void setStationId(int stationId) {
+		this.stationId = stationId;
+	}
+
 	public String getStatus() {
 		return this.status;
 	}
@@ -87,64 +83,12 @@ public class Sensor implements Serializable {
 		this.status = status;
 	}
 
-	public List<Alert> getAlerts() {
-		return this.alerts;
+	public int getStypeId() {
+		return this.stypeId;
 	}
 
-	public void setAlerts(List<Alert> alerts) {
-		this.alerts = alerts;
-	}
-
-	public Alert addAlert(Alert alert) {
-		getAlerts().add(alert);
-		alert.setSensor(this);
-
-		return alert;
-	}
-
-	public Alert removeAlert(Alert alert) {
-		getAlerts().remove(alert);
-		alert.setSensor(null);
-
-		return alert;
-	}
-
-	public List<Measurement> getMeasurements() {
-		return this.measurements;
-	}
-
-	public void setMeasurements(List<Measurement> measurements) {
-		this.measurements = measurements;
-	}
-
-	public Measurement addMeasurement(Measurement measurement) {
-		getMeasurements().add(measurement);
-		measurement.setSensor(this);
-
-		return measurement;
-	}
-
-	public Measurement removeMeasurement(Measurement measurement) {
-		getMeasurements().remove(measurement);
-		measurement.setSensor(null);
-
-		return measurement;
-	}
-
-	public Sensortype getSensortype() {
-		return this.sensortype;
-	}
-
-	public void setSensortype(Sensortype sensortype) {
-		this.sensortype = sensortype;
-	}
-
-	public Station getStation() {
-		return this.station;
-	}
-
-	public void setStation(Station station) {
-		this.station = station;
+	public void setStypeId(int stypeId) {
+		this.stypeId = stypeId;
 	}
 
 }

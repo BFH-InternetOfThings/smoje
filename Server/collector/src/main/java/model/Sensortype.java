@@ -2,7 +2,6 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
@@ -24,10 +23,6 @@ public class Sensortype implements Serializable {
 	private String name;
 
 	private String unit;
-
-	//bi-directional many-to-one association to Sensor
-	@OneToMany(mappedBy="sensortype")
-	private List<Sensor> sensors;
 
 	public Sensortype() {
 	}
@@ -62,28 +57,6 @@ public class Sensortype implements Serializable {
 
 	public void setUnit(String unit) {
 		this.unit = unit;
-	}
-
-	public List<Sensor> getSensors() {
-		return this.sensors;
-	}
-
-	public void setSensors(List<Sensor> sensors) {
-		this.sensors = sensors;
-	}
-
-	public Sensor addSensor(Sensor sensor) {
-		getSensors().add(sensor);
-		sensor.setSensortype(this);
-
-		return sensor;
-	}
-
-	public Sensor removeSensor(Sensor sensor) {
-		getSensors().remove(sensor);
-		sensor.setSensortype(null);
-
-		return sensor;
 	}
 
 }

@@ -44,7 +44,7 @@ public class App
             	//todo check if request is necessary
             	if(true){
                   
-            		int sensorType = sensor.getSensortype().getId();
+            		int sensorType = sensor.getStypeId();
             		switch (sensorType) {
 					case 7: // camera
 //						try {
@@ -69,6 +69,8 @@ public class App
             	}
             }
         }
+
+    	
     }
     
     private static void writeLocation(EntityManager em, Station station, Sensor sensor) {
@@ -89,7 +91,7 @@ public class App
             measurement.setTimestamp(date);
             measurement.setValueString(json.get("latitude").asText() + ";" + json.get("longitude").asText());
             measurement.setUnit("latitude/longitude");
-            measurement.setSensor(sensor);
+            measurement.setSensorId(sensor.getId());
             
             em.getTransaction().begin();
             em.persist(measurement);
@@ -122,7 +124,7 @@ public class App
             measurement.setValueFloat((float)json.get("value").asDouble()); // todo optimize            
             measurement.setTimestamp(date);
             measurement.setUnit(json.get("unit").asText());
-            measurement.setSensor(sensor);
+            measurement.setSensorId(sensor.getId());
             
             em.getTransaction().begin();
             em.persist(measurement);
@@ -170,7 +172,7 @@ public class App
 
         measurement.setTimestamp(new java.util.Date());
         measurement.setUnit(json.get("unit").asText());
-        measurement.setSensor(sensor);
+        measurement.setSensorId(sensor.getId());
         
         em.getTransaction().begin();
         em.persist(measurement);

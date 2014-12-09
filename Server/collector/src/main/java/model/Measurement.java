@@ -21,7 +21,10 @@ public class Measurement implements Serializable {
 
 	private String name;
 
-	@Temporal(TemporalType.DATE)
+	@Column(name="sensor_id")
+	private int sensorId;
+
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date timestamp;
 
 	private String unit;
@@ -31,10 +34,6 @@ public class Measurement implements Serializable {
 
 	@Column(name="value_string")
 	private String valueString;
-
-	//bi-directional many-to-one association to Sensor
-	@ManyToOne
-	private Sensor sensor;
 
 	public Measurement() {
 	}
@@ -53,6 +52,14 @@ public class Measurement implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public int getSensorId() {
+		return this.sensorId;
+	}
+
+	public void setSensorId(int sensorId) {
+		this.sensorId = sensorId;
 	}
 
 	public Date getTimestamp() {
@@ -85,14 +92,6 @@ public class Measurement implements Serializable {
 
 	public void setValueString(String valueString) {
 		this.valueString = valueString;
-	}
-
-	public Sensor getSensor() {
-		return this.sensor;
-	}
-
-	public void setSensor(Sensor sensor) {
-		this.sensor = sensor;
 	}
 
 }

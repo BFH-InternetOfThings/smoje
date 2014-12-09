@@ -2,7 +2,6 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
@@ -31,10 +30,6 @@ public class Station implements Serializable {
 
 	@Column(name="url_tissan")
 	private String urlTissan;
-
-	//bi-directional many-to-one association to Sensor
-	@OneToMany(mappedBy="station")
-	private List<Sensor> sensors;
 
 	public Station() {
 	}
@@ -85,28 +80,6 @@ public class Station implements Serializable {
 
 	public void setUrlTissan(String urlTissan) {
 		this.urlTissan = urlTissan;
-	}
-
-	public List<Sensor> getSensors() {
-		return this.sensors;
-	}
-
-	public void setSensors(List<Sensor> sensors) {
-		this.sensors = sensors;
-	}
-
-	public Sensor addSensor(Sensor sensor) {
-		getSensors().add(sensor);
-		sensor.setStation(this);
-
-		return sensor;
-	}
-
-	public Sensor removeSensor(Sensor sensor) {
-		getSensors().remove(sensor);
-		sensor.setStation(null);
-
-		return sensor;
 	}
 
 }
