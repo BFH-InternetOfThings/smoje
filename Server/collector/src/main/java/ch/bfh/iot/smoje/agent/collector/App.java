@@ -2,6 +2,8 @@ package ch.bfh.iot.smoje.agent.collector;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -14,6 +16,7 @@ import javax.ws.rs.core.MediaType;
 
 import model.Measurement;
 import model.Sensor;
+import model.Sensorstation;
 import model.Station;
 
 import org.apache.commons.codec.binary.Base64;
@@ -37,33 +40,46 @@ public class App
                 "SELECT s FROM Station s").getResultList();
         
         for (Station station : stations){
-            List<Sensor> sensors = em.createQuery(
-                    "SELECT s FROM Sensor s").getResultList();
+            List<Sensorstation> sensorstations = em.createQuery(
+                    "SELECT s FROM Sensorstation s").getResultList();
         	
-            for(Sensor sensor : sensors){
+            for(Sensorstation sensorStation : sensorstations){
             	//todo check if request is necessary
+            	
+//            	Measurement lastMeasurement = (Measurement) em.createQuery("select max(m.timestamp) from Measurement m where m.sensorstation = :mySensorstation")
+//            	  .setParameter("mySensorstation", sensorStation)
+//            	  .getSingleResult();
+            	
+            	//lastMeasurement.getTimestamp() + sensorStation.getDelay() <= 
+//            	Calendar lastCal = Calendar.getInstance();
+//            	lastCal.setTime(lastMeasurement.getTimestamp());
+//            	lastCal.add(Calendar.MINUTE, sensorStation.getDelay());
+//            	
+//            	boolean read = lastCal.before(Calendar.getInstance());
+//            	
+//            	System.out.println(read);
+//	
             	if(true){
-                  
-            		int sensorType = sensor.getStypeId();
+            		int sensorType = sensorStation.getSensor().getId();
             		switch (sensorType) {
-					case 7: // camera
-//						try {
-//							writePhoto(em, station, sensor);
-//						} catch (JsonProcessingException e1) {
-//							// TODO Auto-generated catch block
-//							e1.printStackTrace();
-//						} catch (IOException e1) {
-//							// TODO Auto-generated catch block
-//							e1.printStackTrace();
-//						}
+					case 1: // camera
+						try {
+							writePhoto(em, station, sensorStation);
+						} catch (JsonProcessingException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
 						break;
 
-					case 8: // GPS
+					case 9: // GPS
 //						writeLocation(em, station, sensor);
 						break;
 						
 					default:
-						writeSensor(em, station, sensor);
+						writeSensor(em, station, sensorStation);
 						break;
 					}
             	}
@@ -83,15 +99,15 @@ public class App
         try {
             JsonNode json = mapper.readTree(res);
                               
-            java.util.Date date = new java.util.Date();
+            Timestamp date = new Timestamp(0);
             
             Measurement measurement = new Measurement();
-            measurement.setName(json.get("id").asText());
             
             measurement.setTimestamp(date);
-            measurement.setValueString(json.get("latitude").asText() + ";" + json.get("longitude").asText());
-            measurement.setUnit("latitude/longitude");
-            measurement.setSensorId(sensor.getId());
+            measurement.setValue(json.get("latitude").asText() + ";" + json.get("longitude").asText());
+            measurement.setSensor(sensor);
+            measurement.setStation(station);
+            
             
             em.getTransaction().begin();
             em.persist(measurement);
@@ -107,10 +123,10 @@ public class App
         }
 	}
 
-	private static void writeSensor(EntityManager em, Station station, Sensor sensor) {
+	private static void writeSensor(EntityManager em, Station station, Sensorstation sensorStation) {
 			
   	    Client client = ClientBuilder.newBuilder().build();              
-        WebTarget target = client.target(station.getUrlSensor() + sensor.getName());           
+        WebTarget target = client.target(station.getUrlSensor() + sensorStation.getSensor().getName());           
         String res = target.request(MediaType.APPLICATION_JSON).get(String.class);
         ObjectMapper mapper = new ObjectMapper();
                 
@@ -120,11 +136,10 @@ public class App
             java.util.Date date = new java.util.Date();
             
             Measurement measurement = new Measurement();
-            measurement.setName(json.get("id").asText());
-            measurement.setValueFloat((float)json.get("value").asDouble()); // todo optimize            
+            measurement.setValue(json.get("value").toString());           
             measurement.setTimestamp(date);
-            measurement.setUnit(json.get("unit").asText());
-            measurement.setSensorId(sensor.getId());
+            //todo alert if unit is no the same as in json.get("unit").asText());
+            measurement.setSensorstation(sensorStation);
             
             em.getTransaction().begin();
             em.persist(measurement);
@@ -140,17 +155,19 @@ public class App
         }
 	}
 
-	private static void writePhoto(EntityManager em, Station station, Sensor sensor) throws JsonProcessingException, IOException {
+	private static void writePhoto(EntityManager em, Station station, Sensorstation sensorStation) throws JsonProcessingException, IOException {
         
         ObjectMapper mapper = new ObjectMapper();
         
         Client client = ClientBuilder.newBuilder().build();
-        WebTarget target = client.target(station.getUrlSensor() + "/" + sensor.getName()); 
+        WebTarget target = client.target(station.getUrlSensor() + sensorStation.getSensor().getName()); 
+        
+        System.out.println(target.getUri());
+        
         String res = target.request(MediaType.APPLICATION_JSON).get(String.class);
         JsonNode json = mapper.readTree(res);
         
         Measurement measurement = new Measurement();
-        measurement.setName(json.get("id").asText());
         
         // create file
         JsonNode value = json.get("value");
@@ -163,7 +180,7 @@ public class App
         
         String path = "/var/www/img/";
         
-        measurement.setValueString(path + filename);         
+        measurement.setValue(path + filename);         
         
         FileOutputStream stream = new FileOutputStream(path + filename); 
         try { stream.write(data); 
@@ -171,8 +188,7 @@ public class App
         	stream.close(); }
 
         measurement.setTimestamp(new java.util.Date());
-        measurement.setUnit(json.get("unit").asText());
-        measurement.setSensorId(sensor.getId());
+        measurement.setSensorstation(sensorStation);
         
         em.getTransaction().begin();
         em.persist(measurement);
