@@ -1,4 +1,4 @@
-package model;
+package ch.bfh.iot.smoje.agent.model;
 
 import java.io.Serializable;
 import javax.persistence.*;

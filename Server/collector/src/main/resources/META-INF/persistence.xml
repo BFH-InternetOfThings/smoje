@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="collector">
-		<class>model.Alert</class>
-		<class>model.Displaytype</class>
-		<class>model.Measurement</class>
-		<class>model.Sensor</class>
-		<class>model.Sensorstation</class>
-		<class>model.Station</class>
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>ch.bfh.iot.smoje.agent.model.Displaytype</class>
+		<class>ch.bfh.iot.smoje.agent.model.Measurement</class>
+		<class>ch.bfh.iot.smoje.agent.model.Sensor</class>
+		<class>ch.bfh.iot.smoje.agent.model.Sensorstation</class>
+		<class>ch.bfh.iot.smoje.agent.model.Station</class>
+		<class>ch.bfh.iot.smoje.agent.model.Alert</class>
 		<properties>
 			<property name="eclipselink.jdbc.password" value="2014Smoje$"/>
 			<property name="eclipselink.jdbc.user" value="app_smoje"/>
