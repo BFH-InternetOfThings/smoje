@@ -1,13 +1,10 @@
 package ch.bfh.iot.smoje.agent.collector;
 
-import ch.bfh.iot.smoje.agent.model.Measurement;
-import ch.bfh.iot.smoje.agent.model.Sensor;
-import ch.bfh.iot.smoje.agent.model.Sensorstation;
-import ch.bfh.iot.smoje.agent.model.Station;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.codec.binary.Base64;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -15,11 +12,17 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
-import java.util.List;
+
+import org.apache.commons.codec.binary.Base64;
+
+import ch.bfh.iot.smoje.agent.model.Measurement;
+import ch.bfh.iot.smoje.agent.model.Sensor;
+import ch.bfh.iot.smoje.agent.model.Sensorstation;
+import ch.bfh.iot.smoje.agent.model.Station;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Agent 007
@@ -33,8 +36,9 @@ public class App {
         List<Station> stations = em.createQuery("SELECT s FROM Station s").getResultList();
 
         for (Station station : stations) {
+            
             List<Sensorstation> sensorStations = em.createQuery("SELECT s FROM Sensorstation s WHERE s.station = ?1")
-		            .setParameter(1, station).getResultList();
+                .setParameter(1, station).getResultList();
 
             for (Sensorstation sensorStation : sensorStations) {
                 // todo check if request is necessary
@@ -54,7 +58,7 @@ public class App {
                 // System.out.println(read);
                 //
                 if (true) {
-	                Sensor sensor = sensorStation.getSensor();
+	            Sensor sensor = sensorStation.getSensor();
                     int sensorType = sensor.getId();
                     switch (sensorType) {
                     case 1: // camera
@@ -131,7 +135,6 @@ public class App {
             // todo alert if unit is no the same as in
             // json.get("unit").asText());
             measurement.setStation(station);
-	        measurement.setSensor(sensor);
 
             em.getTransaction().begin();
             em.persist(measurement);
