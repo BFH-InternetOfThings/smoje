@@ -135,6 +135,7 @@ public class App {
             // todo alert if unit is no the same as in
             // json.get("unit").asText());
             measurement.setStation(station);
+            measurement.setSensor(sensor);
 
             em.getTransaction().begin();
             em.persist(measurement);
@@ -188,6 +189,7 @@ public class App {
         System.out.println(new Timestamp(new Date().getTime()));
         measurement.setTimestamp(new Timestamp(new Date().getTime()));
         measurement.setStation(station);
+        measurement.setSensor(sensor);
 
         em.getTransaction().begin();
         em.persist(measurement);
