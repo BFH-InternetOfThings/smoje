@@ -23,6 +23,7 @@ import ch.bfh.iot.smoje.agent.model.Station;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Calendar;
 
 /**
  * Agent 007
@@ -43,21 +44,18 @@ public class App {
             for (Sensorstation sensorStation : sensorStations) {
                 // todo check if request is necessary
 
-                // Measurement lastMeasurement = (Measurement)
-                // em.createQuery("select max(m.timestamp) from Measurement m where m.sensorstation = :mySensorstation")
-                // .setParameter("mySensorstation", sensorStation)
-                // .getSingleResult();
+                Timestamp lastTimestamp = (Timestamp) em.createQuery("select max(m.timestamp) from Measurement m where m.station = ?1 and m.sensor = ?2")
+                    .setParameter(1, sensorStation.getStation())
+                    .setParameter(2, sensorStation.getSensor())
+                    .getSingleResult();
 
-                // lastMeasurement.getTimestamp() + sensorStation.getDelay() <=
-                // Calendar lastCal = Calendar.getInstance();
-                // lastCal.setTime(lastMeasurement.getTimestamp());
-                // lastCal.add(Calendar.MINUTE, sensorStation.getDelay());
-                //
-                // boolean read = lastCal.before(Calendar.getInstance());
-                //
-                // System.out.println(read);
-                //
-                if (true) {
+                Calendar lastCal = Calendar.getInstance();
+                lastCal.setTime(lastTimestamp);
+                lastCal.add(Calendar.MINUTE, sensorStation.getDelay());
+
+                boolean read = lastCal.before(Calendar.getInstance());
+
+                if (read) {
 	            Sensor sensor = sensorStation.getSensor();
                     int sensorType = sensor.getId();
                     switch (sensorType) {
@@ -130,7 +128,7 @@ public class App {
             JsonNode json = mapper.readTree(res);
 
             Measurement measurement = new Measurement();
-            measurement.setValue(json.get("value").toString());
+            measurement.setValue(json.get("value").toString().replaceAll("\"", ""));
             measurement.setTimestamp(new Timestamp(new Date().getTime()));
             // todo alert if unit is no the same as in
             // json.get("unit").asText());
@@ -177,7 +175,7 @@ public class App {
         // TODO: in properties verschieben
         String path = "/var/www/img/";
 
-        measurement.setValue(path + filename);
+        measurement.setValue(filename);
 
         FileOutputStream stream = new FileOutputStream(path + filename);
         try {
