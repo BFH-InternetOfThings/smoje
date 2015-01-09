@@ -1,0 +1,25 @@
+insert into sensortype (name, description) values ('temperature/humidity', 'Measure of water temperature');
+insert into sensortype (name, description) values ('temperature', 'Measure of air temparature');
+insert into sensortype (name, description) values ('direction/speed', 'Measure of air temperature');
+insert into sensortype (name, description) values ('temperature/pressure', 'Measure of air pressure');
+insert into sensortype (name, description) values ('uv-index', 'Measure of uv index');
+insert into sensortype (name, description) values ('radiation', 'Measure of radiation');
+insert into station(name, description, url_sensor, url_netmodule, url_tissan) values('Smoje1', '', 'url_sensor', '','');
+insert into station(name, description, url_sensor, url_netmodule, url_tissan) values('Smoje2', '', 'url_sensor', '','');
+insert into sensor(name, description, delay, status, station_id, stype_id) values('air-temperature','', 10, 'OK', 1, 1);
+insert into sensor(name, description, delay, status, station_id, stype_id) values('wind','Mesasures wind direction', 10, 'OK', 1, 3);
+insert into sensor(name, description, delay, status, station_id, stype_id) values('water-temperature','Mesasures air temperature', 60, 'OK', 1, 2);
+insert into sensor(name, description, delay, status, station_id, stype_id) values('geiger-counter','', 60, 'OK', 1, 6);
+insert into sensor(name, description, delay, status, station_id, stype_id) values('air-temperature','', 10, 'OK', 2, 1);
+insert into sensor(name, description, delay, status, station_id, stype_id) values('wind','Mesasures wind direction', 10, 'OK', 2, 3);
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('temperature', 15.2,null,NOW(),1, '°C');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('humidity', 90,null,NOW(),1, '%');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('direction', 4.573212,null,NOW(),2, '°');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('speed', 24,null,NOW(),2, 'km/h');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('temperature', 2.45,null,NOW(),3, '°C');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('uv-index', 4.4,null,NOW(),4, 'DPM');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('temperature', 9.2,null,NOW(),5, '°C');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('humidity', 70,null,NOW(),5, '%');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('direction', 15.573212,null,NOW(),6, '°');
+insert into measurement (name, value_float, value_string, timestamp, sensor_id, unit) values ('speed', 12,null,NOW(),6, 'km/h');
+

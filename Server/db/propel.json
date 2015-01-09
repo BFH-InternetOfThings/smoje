@@ -1,0 +1,26 @@
+{
+    "propel": {
+        "database": {
+            "connections": {
+                "smojedb": {
+                    "adapter": "mysql",
+                    "classname": "Propel\\Runtime\\Connection\\ConnectionWrapper",
+                    "dsn": "mysql:host=localhost;dbname=smojedb",
+                    "user": "",
+                    "password": "",
+                    "attributes": []
+                }
+            }
+        },
+        "runtime": {
+            "defaultConnection": "smojedb",
+            "connections": ["smojedb"]
+        },
+        "generator": {
+            "defaultConnection": "smojedb",
+            "connections": ["smojedb"]
+        }
+    }
+}
+
+

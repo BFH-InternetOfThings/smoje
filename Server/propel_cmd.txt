@@ -1,0 +1,12 @@
+#insert sql-statements in db
+propel --sql-dir=db/generated-sql/ --input-dir=db sql:insert
+
+#generate schema.xml from existing DB
+cd db
+propel database:reverse "mysql:host=localhost;dbname=smojedb;user=app_smoje;password=2014Smoje$"
+
+#generate propel orm classes
+propel model:build
+
+#load classes
+php composer.phar dump-autoload
