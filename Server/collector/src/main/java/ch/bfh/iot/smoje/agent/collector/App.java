@@ -1,8 +1,10 @@
 package ch.bfh.iot.smoje.agent.collector;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +25,6 @@ import ch.bfh.iot.smoje.agent.model.Station;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.util.Calendar;
 
 /**
  * Agent 007
@@ -34,11 +35,13 @@ public class App {
     public static void main(String[] args) {
         EntityManager em = Persistence.createEntityManagerFactory("collector").createEntityManager();
 
+        System.out.println("START: Getting stations ");
+
         List<Station> stations = em.createQuery("SELECT s FROM Station s").getResultList();
 
         for (Station station : stations) {
             
-            List<Sensorstation> sensorStations = em.createQuery("SELECT s FROM Sensorstation s WHERE s.station = ?1")
+            List<Sensorstation> sensorStations = em.createQuery("SELECT s FROM Sensorstation s WHERE s.station = ?1 and s.active = 1 ")
                 .setParameter(1, station).getResultList();
 
             for (Sensorstation sensorStation : sensorStations) {
@@ -54,23 +57,15 @@ public class App {
                 lastCal.add(Calendar.MINUTE, sensorStation.getDelay());
 
                 boolean read = lastCal.before(Calendar.getInstance());
+                System.out.println("Sensor " + sensorStation.getSensor().getName() + " doRead: " + read);
 
                 if (read) {
 	            Sensor sensor = sensorStation.getSensor();
                     int sensorType = sensor.getId();
                     switch (sensorType) {
                     case 1: // camera
-                        try {
                             writePhoto(em, station, sensor);
-                        } catch (JsonProcessingException e1) {
-                            // TODO Auto-generated catch block
-                            e1.printStackTrace();
-                        } catch (IOException e1) {
-                            // TODO Auto-generated catch block
-                            e1.printStackTrace();
-                        }
                         break;
-
                     case 9: // GPS
                         // writeLocation(em, station, sensor);
                         break;
@@ -82,6 +77,8 @@ public class App {
                 }
             }
         }
+        
+        System.out.println("END: Collector finished");
 
     }
 
@@ -118,6 +115,8 @@ public class App {
     }
 
     private static void writeSensor(EntityManager em, Station station, Sensor sensor) {
+        
+        System.out.println("START write sensor " + sensor.getName());
 
         Client client = ClientBuilder.newBuilder().build();
         WebTarget target = client.target(station.getUrlSensor() + sensor.getName());
@@ -146,9 +145,12 @@ public class App {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        System.out.println("END write sensor " + sensor.getName());
     }
 
-    private static void writePhoto(EntityManager em, Station station, Sensor sensor) throws JsonProcessingException, IOException {
+    private static void writePhoto(EntityManager em, Station station, Sensor sensor) {
+        
+        System.out.println("START writing Photo");
 
         ObjectMapper mapper = new ObjectMapper();
 
@@ -158,7 +160,16 @@ public class App {
         System.out.println(target.getUri());
 
         String res = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        JsonNode json = mapper.readTree(res);
+        JsonNode json = null;
+        try {
+            json = mapper.readTree(res);
+        } catch (JsonProcessingException e) {
+            System.out.println("JSON Error while parsing JSON");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("IO Error while parsing JSON");
+            e.printStackTrace();
+        }
 
         Measurement measurement = new Measurement();
 
@@ -166,7 +177,7 @@ public class App {
         JsonNode value = json.get("value");
         byte[] data = Base64.decodeBase64(value.asText());
 
-        System.out.println(value.asText());
+//        System.out.println(value.asText());
 
         // TODO: File naming
         String filename = new Date().toString() + ".jpg";
@@ -177,12 +188,13 @@ public class App {
 
         measurement.setValue(filename);
 
-        FileOutputStream stream = new FileOutputStream(path + filename);
-        try {
+        try (FileOutputStream stream = new FileOutputStream(path + filename)){
             stream.write(data);
-        } finally {
-            stream.close();
-        }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } 
 
         System.out.println(new Timestamp(new Date().getTime()));
         measurement.setTimestamp(new Timestamp(new Date().getTime()));
@@ -192,5 +204,7 @@ public class App {
         em.getTransaction().begin();
         em.persist(measurement);
         em.getTransaction().commit();
+        
+        System.out.println("END: Writeing Photo");
     }
 }
