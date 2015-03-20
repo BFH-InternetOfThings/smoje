@@ -51,12 +51,19 @@ public class App {
                     .setParameter(1, sensorStation.getStation())
                     .setParameter(2, sensorStation.getSensor())
                     .getSingleResult();
+                
+                
+                Calendar lastCal = null;
+                
+                // On first measurement, lastTimestamp is null
+                if(lastTimestamp != null) {
+                    lastCal = Calendar.getInstance();
+                    lastCal.setTime(lastTimestamp);
+                    lastCal.add(Calendar.MINUTE, sensorStation.getDelay());
+                }
 
-                Calendar lastCal = Calendar.getInstance();
-                lastCal.setTime(lastTimestamp);
-                lastCal.add(Calendar.MINUTE, sensorStation.getDelay());
 
-                boolean read = lastCal.before(Calendar.getInstance());
+                boolean read = lastCal == null || lastCal.before(Calendar.getInstance());
                 System.out.println("Sensor " + sensorStation.getSensor().getName() + " doRead: " + read);
 
                 if (read) {
