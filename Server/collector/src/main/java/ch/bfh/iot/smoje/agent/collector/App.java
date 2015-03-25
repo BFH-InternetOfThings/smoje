@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -113,11 +114,9 @@ public class App {
             em.getTransaction().commit();
 
         } catch (JsonProcessingException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -146,11 +145,9 @@ public class App {
             em.getTransaction().commit();
 
         } catch (JsonProcessingException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         System.out.println("END write sensor " + sensor.getName());
     }
@@ -186,8 +183,8 @@ public class App {
 
 //        System.out.println(value.asText());
 
-        // TODO: File naming
-        String filename = new Date().toString() + ".jpg";
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        String filename = df.format(new Date()) + ".jpg";
         System.out.println(filename);
 
         // TODO: in properties verschieben
@@ -198,9 +195,9 @@ public class App {
         try (FileOutputStream stream = new FileOutputStream(path + filename)){
             stream.write(data);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } 
 
         System.out.println(new Timestamp(new Date().getTime()));
