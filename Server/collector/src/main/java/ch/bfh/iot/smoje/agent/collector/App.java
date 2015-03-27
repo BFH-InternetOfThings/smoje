@@ -17,6 +17,8 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import ch.bfh.iot.smoje.agent.model.Measurement;
 import ch.bfh.iot.smoje.agent.model.Sensor;
@@ -32,11 +34,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  *
  */
 public class App {
+    private static final Logger logger = LogManager.getLogger();
 
     public static void main(String[] args) {
         EntityManager em = Persistence.createEntityManagerFactory("collector").createEntityManager();
 
-        System.out.println("START: Getting stations ");
+        logger.info("START: Getting stations ");
 
         List<Station> stations = em.createQuery("SELECT s FROM Station s").getResultList();
 
@@ -65,7 +68,7 @@ public class App {
 
 
                 boolean read = lastCal == null || lastCal.before(Calendar.getInstance());
-                System.out.println("Sensor " + sensorStation.getSensor().getName() + " doRead: " + read);
+                logger.info("Sensor " + sensorStation.getSensor().getName() + " doRead: " + read);
 
                 if (read) {
 	            Sensor sensor = sensorStation.getSensor();
@@ -86,7 +89,7 @@ public class App {
             }
         }
         
-        System.out.println("END: Collector finished");
+        logger.info("END: Collector finished");
 
     }
 
@@ -114,15 +117,15 @@ public class App {
             em.getTransaction().commit();
 
         } catch (JsonProcessingException e) {
-            System.out.println(e.getMessage());
+            logger.catching(e);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            logger.catching(e);;
         }
     }
 
     private static void writeSensor(EntityManager em, Station station, Sensor sensor) {
         
-        System.out.println("START write sensor " + sensor.getName());
+        logger.info("START write sensor " + sensor.getName());
 
         Client client = ClientBuilder.newBuilder().build();
         WebTarget target = client.target(station.getUrlSensor() + sensor.getName());
@@ -145,34 +148,32 @@ public class App {
             em.getTransaction().commit();
 
         } catch (JsonProcessingException e) {
-            System.out.println(e.getMessage());
+            logger.catching(e);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            logger.catching(e);
         }
-        System.out.println("END write sensor " + sensor.getName());
+        logger.info("END write sensor " + sensor.getName());
     }
 
     private static void writePhoto(EntityManager em, Station station, Sensor sensor) {
         
-        System.out.println("START writing Photo");
+        logger.info("START writing Photo");
 
         ObjectMapper mapper = new ObjectMapper();
 
         Client client = ClientBuilder.newBuilder().build();
         WebTarget target = client.target(station.getUrlSensor() + sensor.getName());
 
-        System.out.println(target.getUri());
+        logger.info(target.getUri());
 
         String res = target.request(MediaType.APPLICATION_JSON).get(String.class);
         JsonNode json = null;
         try {
             json = mapper.readTree(res);
         } catch (JsonProcessingException e) {
-            System.out.println("JSON Error while parsing JSON");
-            e.printStackTrace();
+            logger.catching(e);
         } catch (IOException e) {
-            System.out.println("IO Error while parsing JSON");
-            e.printStackTrace();
+            logger.catching(e);
         }
 
         Measurement measurement = new Measurement();
@@ -181,11 +182,9 @@ public class App {
         JsonNode value = json.get("value");
         byte[] data = Base64.decodeBase64(value.asText());
 
-//        System.out.println(value.asText());
-
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
         String filename = df.format(new Date()) + ".jpg";
-        System.out.println(filename);
+        logger.info(filename);
 
         // TODO: in properties verschieben
         String path = "/var/www/img/";
@@ -195,12 +194,11 @@ public class App {
         try (FileOutputStream stream = new FileOutputStream(path + filename)){
             stream.write(data);
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+            logger.catching(e);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            logger.catching(e);
         } 
 
-        System.out.println(new Timestamp(new Date().getTime()));
         measurement.setTimestamp(new Timestamp(new Date().getTime()));
         measurement.setStation(station);
         measurement.setSensor(sensor);
@@ -209,6 +207,6 @@ public class App {
         em.persist(measurement);
         em.getTransaction().commit();
         
-        System.out.println("END: Writeing Photo");
+        logger.info("END: Writeing Photo");
     }
 }
